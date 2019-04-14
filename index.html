@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="p5.js"></script>
+  <script src="mappa.min.js"></script>
+  <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" 
+    rel = "stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+  <style>
+
+  </style>
+  <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <script>
+    $(function() {
+            $( "#datepicker1" ).datepicker({
+               prevText:"click for previous months",
+               nextText:"click for next months",
+               defaultDate: new Date(2018, 8 - 1, 1),
+               minDate: new Date(2018, 8 - 1, 1),
+               maxDate: new Date(2019, 3 - 1, 31),
+               showOtherMonths:true,
+               selectOtherMonths: false
+            });
+            $( "#datepicker2" ).datepicker({
+               prevText:"click for previous months",
+               nextText:"click for next months",
+               default: new Date(2018, 8 - 1, 31),
+               minDate: new Date(2018, 8 - 1, 1),
+               maxDate: new Date(2019, 3 - 1, 31),
+               showOtherMonths:true,
+               selectOtherMonths: false
+            });
+         });
+  </script>
+  <!-- this line removes any default padding and style. you might only need one of these values set. -->
+  <style> body {padding: 0; margin: 0; cursor: default; background-color: rgb(203,210,211);} </style>
+</head>
+
+<body>
+	<center>
+    <h1>My Driving Explorer</h1>
+	  <div>Beginning Date: <input type="text" id="datepicker1" src="script.js" class="pure-input-rounded" style="border-radius: 20px;">  Ending Date: <input type="text" id="datepicker2" src="script.js" class="pure-input-rounded" style="border-radius: 20px;">&nbsp;&nbsp;<button type="submit" id="btn_submit" class="pure-button" style="border-radius: 20px;"> Explore </button></div>
+  </center>
+  <br>
+	<script language="javascript" type="text/javascript" src="script.js"></script>
+</body>
+</html>
